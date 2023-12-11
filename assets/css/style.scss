@@ -1,5 +1,121 @@
-@import url(./_reset.scss);
+@import "./reset";
+
 body{
-    
-   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200vh;
+}
+.phone{
+    background-color: black;
+    border-radius: 50px;
+    height: 95%;
+    width: 420px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    box-sizing: border-box;
+}
+.header{
+    width: 200%; 
+    .header__list{
+        height: 100%;
+        display: flex;
+        color: #fff;
+       
+
+        gap: 5px;
+       
+        .header__list-item{
+            color: #fff;
+            a{
+                overflow: hidden;
+                color: #fff;
+                border: 1px solid rgba($color: #fff, $alpha: 0.5);
+                padding: 10px;
+                border-radius: 20px;
+            }
+        }
+        .header__list-item-inverted a{
+            background-color: #fff;
+            color: #111;
+        }
+    }
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: 30px 0;
+    color: #111;
+    .cards__card{
+        background-color: #fff;
+        padding: 20px 10px;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+        .card__title{
+            font-size: 24px; 
+        }
+        .card__footer{
+            font-size: 12px;
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            .price{
+                background-color: #E9AFFC;
+                padding: 10px;
+                border: 1px solid #111;
+                border-radius: 35px;
+            }
+            .free{
+                background-color: #FFDD2C;
+                padding: 10px;
+                border: 1px solid #111;
+                border-radius: 35px;
+            }
+            .price_month{
+
+            }
+            .length{
+                padding: 10px;
+                border: 1px solid #111;
+                border-radius: 15px;
+                background-color: #fff;
+            }
+        }
+        &:first-child{
+            border: 1px solid #fff;
+            color: white;
+            background-color: #292D33;
+            .card__footer span{
+                background-color: #fff;
+                color: #111;
+                border: 1px solid #fff;
+            }
+        }
+        &:nth-child(3){
+            background-color: #F9FDBE;
+            .price{
+                background-color: #E9AFFC;
+            }
+        }
+        &:nth-child(4){
+            background-color: #B2A0F6;
+        }
+        &:nth-child(5){
+            background-color:#FFD0D0 ;
+        }
+        &:nth-child(6){
+            background-color:#D0FFDD ;
+        }
+        &:nth-child(3n){
+            grid-column: span 2;
+            .card__title{
+                font-size: 30px;
+            }
+        }
+    }
 }
